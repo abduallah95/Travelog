@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.juhani.thnibat.travelog.MapScreen">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.juhani.thnibat.travelog.MapScreen" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="7dp">
+
+        <EditText
+            android:id="@+id/searchFilter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="13dp"
+            android:textCursorDrawable="@color/black"
+            android:singleLine="true"
+            android:hint="@string/searchbarhint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/mapSwitch"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/searchbar" />
+
+        <ImageView
+            android:id="@+id/searchbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:layout_alignBottom="@+id/searchFilter"
+            android:layout_alignRight="@+id/searchFilter"
+            android:layout_alignTop="@+id/searchFilter"
+            android:onClick="search"
+            android:padding="5dp"
+            android:src="@mipmap/searchicon" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/camButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="70dp"
+        android:maxWidth="70dp"
+        android:scaleType="fitCenter"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="camera"
+        android:src="@drawable/capturebtn"
+        tools:ignore="OnClick" />
+
+
+    <ImageButton
+        android:id="@+id/chatList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/camButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:onClick="chat"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chat" />
+
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:scaleType="fitCenter"
+        android:onClick="showSearchBar"
+        android:src="@drawable/searchbutton" />
+
+
+    <ImageButton
+        android:id="@+id/nearbyplaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:onClick="placesNearby"
+        android:scaleType="fitCenter"
+        android:src="@drawable/placesbutton" />
+
+    <Switch
+        android:id="@+id/mapSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/privateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mapSwitch"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/mapSwitch"
+        android:layout_toRightOf="@+id/mapSwitch"
+        android:adjustViewBounds="true"
+        android:maxHeight="27dp"
+        android:maxWidth="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/privateview" />
+
+    <ImageView
+        android:id="@+id/publicView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mapSwitch"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_toLeftOf="@+id/mapSwitch"
+        android:layout_toStartOf="@+id/mapSwitch"
+        android:adjustViewBounds="true"
+        android:maxHeight="27dp"
+        android:maxWidth="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/publicview" />
+
+    <ImageButton
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/chatList"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:scaleType="fitCenter"
+        android:onClick="profile"
+        android:src="@drawable/userprofileicon" />
+
+
+</RelativeLayout>

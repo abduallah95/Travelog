@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Travelog</string>
+    <string name="title_activity_map_screen">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="searchbarhint"><b>Search for user images</b></string>
+
+</resources>

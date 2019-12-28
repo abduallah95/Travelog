@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.juhani.thnibat.travelog.CameraScreen">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/image" />
+
+
+
+    <ImageButton
+        android:id="@+id/button_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="70dp"
+        android:maxWidth="70dp"
+        android:scaleType="fitCenter"
+        android:onClick="takePicture"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/capturebtn" />
+
+
+    <ImageButton
+        android:id="@+id/imageShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_image"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:onClick="importPicture"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/pickimage" />
+
+    <ImageButton
+        android:id="@+id/sharebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/imageShare"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/share" />
+
+    <ImageButton
+        android:id="@+id/onlyme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/lockicon2" />
+
+</RelativeLayout>
